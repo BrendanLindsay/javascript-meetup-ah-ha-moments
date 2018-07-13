@@ -1,15 +1,21 @@
 /*****************************
  JavaSctipt Charlotte Meetup
 *****************************/
+// Scope
+// Higher-order functions
+// Hoisting
+// Closure
+// Coercion
+
 // Var leaks out of the {} when used in "if" and "for" statements
-/*
+
 function baz() {
     var x = 2;
     console.log(x)
     return x;
 }
 baz()
-*/
+
 
 // Declare variables at the start of the function
 // Otherwise, they will not be called, and you will often get 'undefined'
@@ -26,3 +32,16 @@ var result = foo();
 
 //foo is a higher order function, because it returns a function
 // var j is in the scope of for (variable of iterable) {
+
+// Study: coercion rules behind ==
+
+let condition = 123
+
+// Redundant
+if (condition === true) {}
+
+// Tricky
+if (condition == true) {}
+
+// Straightforward
+if (condition) {}
